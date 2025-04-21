@@ -3,8 +3,9 @@ import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import AboutPage from './pages/AboutPage'
 import ErrorPage from './pages/ErrorPage'
-import HomePage from './pages/HomePage'
+// import HomePage from './pages/HomePage'
 import CharactersPage from './pages/CharactersPage'
+import CharacterDetailsPage from './pages/CharacterDetailsPage'
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "/characters",
                 element: <CharactersPage/>
+            },
+            {
+                path: "/character/:id",
+                element: <CharacterDetailsPage/>
             }
         ],
         errorElement: <ErrorPage/>
